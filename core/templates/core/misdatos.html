@@ -1,0 +1,119 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content  %}
+<h1>Mis Datos</h1>
+    <div>
+        <!-- contenido principal de la página -->
+        <form method="POST" id="formulario_misdatos" action="recibir_datos">
+                <div class="container fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="mb-3 fw-bold">
+                                <label for="rut " class="form-label">RUT</label>
+                                <input type="text" id="rut" name="rut" class="form-control" placeholder="Ej. 12345678 "
+                                    value="">
+                                <div class="invalid-feedback">
+                                    Debe llenar el campo solicitado
+                                </div>
+                            </div>
+                            <div class="mb-3 fw-bold">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control"
+                                    placeholder="escriba todo su nombre" value="" />
+                                <div class="invalid-feedback">
+                                    Debe llenar el campo solicitado
+                                </div>
+                            </div>
+                            <div class="mb-3 fw-bold">
+                                <label for="apellidos" class="form-label">Apellidos</label>
+                                <input type="text" id="apellidos" name="apellidos" class="form-control"
+                                    placeholder="escriba su apellidos completo" value="" />
+                                <div class="invalid-feedback">
+                                    Debe llenar el campo solicitado
+                                </div>
+                            </div>
+                            <div class="mb-3 fw-bold">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="AB123@email.com"
+                                    value=""/>
+                                <div id="emailHelp" class="form-text">
+                                    Nunca se compartirá tu correo Electrónico
+                                </div>
+                                <div class="invalid-feedback">
+                                    Debe llenar el campo solicitado
+                                </div>
+                            </div>
+                            <div class="mb-3 fw-bold">
+                                <label for="direccion" class="form-label">Dirección</label>
+                                <textarea class="form-control" id="direccion" name="dirección" rows="3"
+                                    placeholder="Escriba su Dirección" ></textarea>
+                                <div class="invalid-feedback">
+                                    Debe llenar el campo solicitado
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="subscripcion" />
+                                <label class="form-check-label" for="subscripcion">
+                                    <strong> Subscribirse a la fundación </strong>
+                                </label>
+                                <div id="subscripcionHelp" class="form-text">
+                                    Deseo suscribirme a un aporte semanal de 500 peso diarios
+                                    para la fundación de PATITAS al RESCATE y obtener un 30%
+                                    de descuento en mis próximas compras compras
+                                </div>
+
+                                <div class="mb-3 fw-bold">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="Escriba Contraseña" value=""/>
+                                    <div class="invalid-feedback">
+                                        Debe llenar el campo solicitado
+                                    </div>
+                                </div>
+                                <div class="mb-3 fw-bold">
+                                    <label for="password2" class="form-label">confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="password2" name="password2"
+                                        placeholder="Repita su Contraseña" value=""/>
+                                    <div class="invalid-feedback">
+                                        Debe llenar el campo solicitado
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Registrarse
+                            </button>
+                            <button type="reset" class="btn btn-primary">
+                                Limpiar campos
+                            </button>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="{% static 'core/images/user.jpg' %}" alt="" class="user-image" width="225"
+                                            height="250" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="file" class="form-control" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col"></div>
+                    </div>
+                </div>
+        </form>
+    </div>
+
+{% endblock  %}
+
+{% block script %}
+    <script src="{% static 'core/js/misdatos.js' %}"></script>
+{% endblock  %}

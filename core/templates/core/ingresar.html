@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1 class="text-center">Ingresar a la tienda</h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4 border border-3 p-4">
+                <form method="POST" id="form">
+
+                    {% csrf_token %}
+        
+                    {{ form.as_p }}
+        
+                <div class="text-center">
+                    <button id="ingresar" type="submit" class="btn btn-primary">
+                        Ingresar
+                    </button>
+                </div>
+                </form>                    
+                <br>
+                <br>
+                <a href="{% url 'registro' %}">"Registrarse"</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">"Olvide mi Contraseña"</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}
+
+{% block script %}
+    <script src="{% static 'core/js/login.js' %}"></script>
+{% endblock  %}
+
