@@ -1,5 +1,5 @@
 # Tienda Mascotas
-![Imagen del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/IMAGEN-DEL-PROYECTO.jpg?raw=true)
+![Imagen del proyecto](https://github.com/LinkofDeath/TiendaMascotas/blob/9747d1b09331d94061fc601c364e1c383221f53a/TiendaMascotas.png)
 
 ## Ejemplo en vivo
 - [URL-de-github-pages-de-este-proyecto](URL-de-github-pages-de-este-proyecto)
